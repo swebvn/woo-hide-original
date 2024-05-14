@@ -1,9 +1,6 @@
 name: Release plugin as zip file
 
-on:
-  push:
-    tags:
-      - '*'
+on: 'release'
 
 jobs:
   release:
