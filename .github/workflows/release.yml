@@ -1,6 +1,9 @@
 name: Release plugin as zip file
 
-on: 'release'
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   release:
@@ -11,7 +14,7 @@ jobs:
 
       - name: Create zip file
         run: |
-          zip -r woo-hide-original.zip .
+          zip -r woo-hide-original.zip . -x ".github/*" ".git/*" ".idea/*" ".gitignore"
 
       - name: Upload binaries to release
         uses: softprops/action-gh-release@v2
