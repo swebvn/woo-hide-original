@@ -15,9 +15,9 @@ jobs:
           zip -r woo-hide-original.zip woo-hide-original/
 
       - name: Upload zip file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: woo-hide-original
-          path: woo-hide-original.zip
+          path: ../woo-hide-original.zip
 
 
