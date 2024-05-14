@@ -4,7 +4,7 @@
  * Plugin Name: Woo Hide Original
  * Plugin URI:  https://daudau.cc
  * Description: Hello world
- * Version:     1.0.0
+ * Version:     1.1.3
  * Author:      Nguyen Viet
  * Author URI:  https://daudau.cc
  * License:     GPLv2 or later
