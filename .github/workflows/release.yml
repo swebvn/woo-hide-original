@@ -1,0 +1,26 @@
+name: Release plugin as zip file
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create zip file
+        run: |
+          cd ../
+          zip -r woo-hide-original.zip woo-hide-original/
+
+      - name: Upload zip file
+        uses: actions/upload-artifact@v2
+        with:
+          name: woo-hide-original
+          path: woo-hide-original.zip
+
+
